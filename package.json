@@ -1,0 +1,26 @@
+{
+  "name": "infinite-kittens",
+  "version": "1.0.0",
+  "description": "Infinite scrolling with kittens",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicm42/Infinite-Kittens.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicm42/Infinite-Kittens/issues"
+  },
+  "homepage": "https://github.com/nicm42/Infinite-Kittens#readme",
+  "dependencies": {
+    "autoprefixer": "^9.8.4",
+    "postcss-modules": "^3.2.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

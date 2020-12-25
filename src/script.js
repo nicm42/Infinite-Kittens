@@ -1,18 +1,10 @@
 async function getCats() {
   try {
-    //const cors = 'https://cors-anywhere.herokuapp.com/';
-    const link = 'https://thecatapi.com/v1/images/search?limit=5';
-    const request = await fetch(link, {
-      method: 'GET',
-      headers: {
-        'X-Requested-With': true,
-        'Content-Type': 'application/json'
-      },
-      mode: 'cors'
-    });
+    const link = 'https://api.thecatapi.com/v1/images/search';
+    const request = await fetch(link);
     if(request.ok) {
-      //const data = await request.json();
-      const data = await request;
+      const data = await request.json();
+      //const data = await request;
       console.log(data);
     } else {
       throw new Error(request.statusText);

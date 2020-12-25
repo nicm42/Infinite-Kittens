@@ -5,7 +5,8 @@ async function getCats() {
     const request = await fetch(link);
     if(request.ok) {
       const data = await request.json();
-      console.log(data);
+      //console.log(data);
+      return data;
     } else {
       throw new Error(request.statusText);
     }
@@ -14,4 +15,13 @@ async function getCats() {
   }  
 }
 
-getCats();
+function showCats(data) {
+  console.log(data[0].url);
+}
+
+getCats()
+  .then(data => {
+    if(data) {
+      showCats(data);
+    }
+  });

@@ -118,7 +118,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"src/script.js":[function(require,module,exports) {
-console.log('Hello world');
+async function getCats() {
+  try {
+    //const cors = 'https://cors-anywhere.herokuapp.com/';
+    const link = 'https://thecatapi.com/v1/images/search?limit=5';
+    const request = await fetch(link, {
+      method: 'GET',
+      headers: {
+        'X-Requested-With': true,
+        'Content-Type': 'application/json'
+      },
+      mode: 'cors'
+    });
+
+    if (request.ok) {
+      //const data = await request.json();
+      const data = await request;
+      console.log(data);
+    } else {
+      throw new Error(request.statusText);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getCats();
 },{}],"../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +172,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36749" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44110" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

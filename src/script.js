@@ -1,6 +1,3 @@
-import { config } from "./config";
-const apiKey = config.apiKey;
-
 async function getCats() {
   try {
     //const cors = 'https://cors-anywhere.herokuapp.com/';
@@ -8,14 +5,14 @@ async function getCats() {
     const request = await fetch(link, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey
+        'X-Requested-With': true,
+        'Content-Type': 'application/json'
       },
       mode: 'cors'
     });
     if(request.ok) {
-      const data = await request.json();
-      //const data = await request;
+      //const data = await request.json();
+      const data = await request;
       console.log(data);
     } else {
       throw new Error(request.statusText);

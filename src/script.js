@@ -17,6 +17,10 @@ async function getCats() {
 
 function showCats(data) {
   console.log(data[0].url);
+  const cats = document.querySelector('.cats');
+  const image = document.createElement('img');
+  image.setAttribute('src', data[0].url);
+  cats.appendChild(image);
 }
 
 getCats()

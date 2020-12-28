@@ -35,6 +35,18 @@ function addCats(data, catsCount) {
     cats.appendChild(image);    
   }
   catsCount += 10;
+  if(catsCount >= data.length) {
+    fisherYates(data);
+  }
+}
+
+function fisherYates(array) {
+  for(let i = array.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * i)
+    const temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+  }
 }
 
 getCats()

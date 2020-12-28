@@ -157,6 +157,19 @@ function addCats(data, catsCount) {
   }
 
   catsCount += 10;
+
+  if (catsCount >= data.length) {
+    fisherYates(data);
+  }
+}
+
+function fisherYates(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * i);
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
 }
 
 getCats().then(data => {
@@ -192,7 +205,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44110" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36789" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

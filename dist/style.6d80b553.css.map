@@ -1,1 +1,0 @@
-{"version":3,"sources":["src/style.scss"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,gBAAA;EACA,WAAA","file":"style.6d80b553.css","sourceRoot":"..","sourcesContent":["img {\n  max-width: 45vw;\n  max-height: 45vw;\n  margin: 1em;\n}"]}

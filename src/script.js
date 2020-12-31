@@ -1,4 +1,5 @@
 const cats = document.querySelector('.cats');
+const helper = document.querySelector('.helper');
 
 async function getCats(limit) {
   try {
@@ -67,7 +68,7 @@ const catsObserver = new IntersectionObserver(function(entries) {
   })
 }, observerOptions)
 
-catsObserver.observe(cats);
+catsObserver.observe(helper);
 
 //getCats(10)
   /* .then(data => {

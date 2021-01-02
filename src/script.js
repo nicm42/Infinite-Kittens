@@ -21,8 +21,6 @@ async function getCats(limit) {
 
 function showCats(data) {
   //Just want to add 10 of these for now - we'll add another 10 when the user scrolls
-  //let catsCount = 0;
-  //addCats(data, catsCount);
   data.forEach(cat => {
     const image = document.createElement('img');
     //image.setAttribute('src', cat.url); //TODO uncomment
@@ -30,27 +28,6 @@ function showCats(data) {
     cats.appendChild(image);
   })
 }
-
-//function addCats(data, catsCount) {
-  /* for(let i = catsCount; i < catsCount + 10; i++) {
-    const image = document.createElement('img');
-    image.setAttribute('src', data[i].url);
-    cats.appendChild(image);    
-  } */
-  /* catsCount += 10;
-  if(catsCount >= data.length) {
-    fisherYates(data);
-  } */
-//}
-
-/* function fisherYates(array) {
-  for(let i = array.length - 1; i > 0; i--){
-    const j = Math.floor(Math.random() * i)
-    const temp = array[i]
-    array[i] = array[j]
-    array[j] = temp
-  }
-} */
 
 const observerOptions = {
   rootMargin: "200%" //want to make sure more images load before getting to the bottom of the page
@@ -69,10 +46,3 @@ const catsObserver = new IntersectionObserver(function(entries) {
 }, observerOptions)
 
 catsObserver.observe(helper);
-
-//getCats(10)
-  /* .then(data => {
-    if(data) {
-      showCats(data);
-    }
-  }); */

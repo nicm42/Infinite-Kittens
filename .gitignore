@@ -3,3 +3,6 @@ node_modules/
 src/config.js
 dist/
 images/
+cypress/fixtures
+cypress/plugins
+cypress/support

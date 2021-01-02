@@ -1,5 +1,16 @@
+$img-max-width: 45vw;
+
+.cats {
+  display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(min-content, max-content));
+  grid-template-columns: repeat(auto-fit, $img-max-width);
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-auto-flow: dense;
+  gap: 1em;
+}
+
 img {
-  max-width: 45vw;
-  max-height: 45vw;
-  margin: 1em;
+  max-width: $img-max-width;
+  //max-height: 45vw;
+  //max-width: 20em;
 }

@@ -25,6 +25,7 @@ function showCats(data) {
     const image = document.createElement('img');
     //image.setAttribute('src', cat.url); //TODO uncomment
     image.setAttribute('src', cat);
+    image.setAttribute('alt', 'cat');
     cats.appendChild(image);
   })
 }
@@ -37,6 +38,7 @@ const catsObserver = new IntersectionObserver(function(entries) {
   entries.forEach(entry => {
     console.log(entry)
     if(entry.isIntersecting) {
+      console.log('Loading cats')
       //Since it's intersecting on page load, we don't need to run getCats outside of here
       //getCats(10); //TODO uncomment
       const arr = ['1.106c6bd6.jpg','2.adddeb7c.jpg','3.993a564c.jpg','4.d8cb7558.jpg','5.044aff48.jpg','6.9baee97f.jpg','7.db0ddc3c.jpg','8.4d0a6fce.jpg','9.da115fa2.jpg','10.dd8e1232.jpg']

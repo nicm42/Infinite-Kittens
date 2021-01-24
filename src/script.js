@@ -31,7 +31,7 @@ function showCats(data) {
 }
 
 const observerOptions = {
-  rootMargin: "200%" //want to make sure more images load before getting to the bottom of the page
+  rootMargin: "100%" //want to make sure more images load before getting to the bottom of the page
 }
 
 const catsObserver = new IntersectionObserver(function(entries) {

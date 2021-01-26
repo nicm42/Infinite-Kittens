@@ -1,2 +1,2 @@
-# Infinite-Kittens
-Infinite scrolling with kittens
+# Infinite Cats
+Infinite scrolling with cats

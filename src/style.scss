@@ -1,0 +1,23 @@
+$img-max-width: 45vw;
+
+h1,
+p {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.cats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, $img-max-width);
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-auto-flow: dense;
+  gap: 1em;
+}
+
+img {
+  max-width: $img-max-width;
+}
+
+.helper {
+  height: 10px;
+}

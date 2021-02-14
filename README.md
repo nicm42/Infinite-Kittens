@@ -14,7 +14,7 @@
 I wanted to understand how to infinitely scroll, since that seems to be the in-thing at the moment. I also wanted to practice using APIs. Clearly the answer to this was a page that loads more cats the more you scroll.
 
 ## Screenshots
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.gif)
 
 ## Technologies
 * HTML

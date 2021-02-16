@@ -5,6 +5,7 @@
 * [General info](#general-info)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
+* [Learnings](#learnings)
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
@@ -19,10 +20,15 @@ I wanted to understand how to infinitely scroll, since that seems to be the in-t
 ## Technologies
 * HTML
 * CSS Grid
-* JavaScript: Intersection Observer and async/await
+* JavaScript
 * [TheCatAPI](https://thecatapi.com/)
 * Parcel
 * Cypress
+
+## Learnings
+* JavaScript Intersection Observer
+* JavaScript APIs with async/await
+* Parcel
 
 ## Setup
 To view this project visit the [demo](https://infinite-cats.netlify.app/) or download the files and install locally using npm:

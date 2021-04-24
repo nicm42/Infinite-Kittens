@@ -31,7 +31,7 @@ I wanted to understand how to infinitely scroll, since that seems to be the in-t
 * Parcel
 
 ## Setup
-To view this project visit the [demo](https://infinite-cats.netlify.app/) or download the files and install locally using npm:
+To view this project visit the [demo](https://infinite-cats.nicm42.co.uk/) or download the files and install locally using npm:
 ```
 npm install
 parcel index.html --open
